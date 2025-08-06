@@ -1,3 +1,14 @@
+# YEAH SO THIS IS PRETTY MUCH DEAD, DO YOURSELF A FAVOR AND SWITCH TO [tiny-slider](https://github.com/ganlanyuan/tiny-slider)
+
+
+## Modified temporarily so we can switch to Tiny Slider 2 without breaking the site.
+
+--------
+
+--------
+
+--------
+
 # Owl Carousel 2
 
 Touch enabled [jQuery](https://jquery.com/) plugin that lets you create a beautiful, responsive carousel slider. **To get started, check out https://owlcarousel2.github.io/OwlCarousel2/.**

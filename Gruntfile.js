@@ -84,6 +84,7 @@ module.exports = function(grunt) {
 			sass: {
 				docs: {
 					options: {
+						implementation: require('sass'),
 						outputStyle: 'compressed',
 						includePaths: [ '<%= app.docs.src %>/assets/scss/', 'node_modules/foundation-sites/scss' ]
 					},
@@ -93,7 +94,8 @@ module.exports = function(grunt) {
 				},
 				dist: {
 					options: {
-						outputStyle: 'nested'
+						implementation: require('sass'),
+						outputStyle: 'expanded'
 					},
 					files: {
 						'dist/assets/<%= pkg.name %>.css': 'src/scss/<%= pkg.name %>.scss',
