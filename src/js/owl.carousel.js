@@ -1539,6 +1539,12 @@
 		}
 	};
 
+	function camelCase(str) {
+		return str
+		  .replace(/[-_](.)/g, (match, char) => char.toUpperCase())  // convert dash or underscore followed by a letter to uppercase letter
+		  .replace(/^\w/, c => c.toLowerCase());  // make first character lowercase
+	  }
+
 	/**
 	 * Triggers a public event.
 	 * @todo Remove `status`, `relatedTarget` should be used instead.
@@ -1553,7 +1559,7 @@
 	Owl.prototype.trigger = function(name, data, namespace, state, enter) {
 		var status = {
 			item: { count: this._items.length, index: this.current() }
-		}, handler = $.camelCase(
+		}, handler = camelCase(
 			$.grep([ 'on', name, namespace ], function(v) { return v })
 				.join('-').toLowerCase()
 		), event = $.Event(
